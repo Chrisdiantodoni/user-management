@@ -24,50 +24,52 @@ cd user-management
 ```
 
 ### 3. Instalasi Backend (Laravel)
-bash
-Copy
-Edit
+```bash
 cd backend/user-management-api
 composer install
 cp .env.example .env
 php artisan key:generate
+```
+
 Lalu konfigurasikan database Anda di file .env:
 
 env
-Copy
-Edit
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your_database
 DB_USERNAME=root
 DB_PASSWORD=your_password
+```
+
 Migrasi dan seed database:
 
-bash
-Copy
-Edit
+```bash
 php artisan migrate
 php artisan db:seed
+```
+
 Jalankan server Laravel:
 
-bash
-Copy
-Edit
+```bash
 php artisan serve
-4. Instalasi Frontend (React)
-bash
-Copy
-Edit
+```
+
+### 4. Instalasi Frontend (React)
+
+```bash
 cd ../../front-end/user-management-react
 npm install --legacy-peer-deps
+```
+
 Jalankan development server:
 
-bash
-Copy
-Edit
+```bash
 npm run dev
-5. Jalankan Project
+```
+
+### 5. Jalankan Project
 Laravel Backend berjalan di: http://127.0.0.1:8000
 
 React Frontend (Vite) biasanya di: http://localhost:5173
@@ -77,26 +79,20 @@ React Frontend (Vite) biasanya di: http://localhost:5173
 6. Troubleshooting Umum
 Jika muncul error seperti vite is not recognized, pastikan Vite sudah diinstal secara global atau gunakan:
 
-bash
-Copy
-Edit
+```bash
 npx vite
+```
+
 Pastikan file .env pada backend sudah dikonfigurasi dengan benar.
 
 📂 Struktur Direktori
-sql
-Copy
-Edit
+```bash
 user-management/
 ├── backend/
 │   └── user-management-api/   # Laravel project
 └── front-end/
     └── user-management-react/ # React project
+```
 📄 Lisensi
 Project ini menggunakan lisensi MIT.
-
-go
-Copy
-Edit
-
 README ini sudah siap langsung ditempatkan di root repo `user-management`. Ingin saya bantu generate `proxy` config juga untuk React-nya?
